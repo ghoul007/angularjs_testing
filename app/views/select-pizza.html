@@ -1,0 +1,14 @@
+<h1 id="pizza">Order a pizza</h1>
+<accordion>
+  <h2>Special Deal!</h2>
+  <div>Buy any pizza and get a special deal</div>
+  <h2>25% Off Vegetarian Pizza!</h2>
+  <div>Buy a vegetarian pizza</div>
+</accordion>
+<p>
+  <label>Select your pizza</label><br/>
+  <select ng-model="pizzaType" ng-options="choice for choice in choices"></select>
+</p>
+<p>
+  <button ng-click="placeOrder()">Place Order</button>
+</p>

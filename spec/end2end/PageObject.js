@@ -1,7 +1,9 @@
-var homepage = {
-    pageHeading : element(webdriver.By.id('welcome-message')),
-    get : function () {
-        browser.get('index.html');
-    }
-
-}
+// var webdriver = require('selenium-webdriver');
+//
+// var homepage = {
+//     pageHeading : element(webdriver.By.id('welcome-message')),
+//     get : function () {
+//         browser.get('index.html');
+//     }
+//
+// }
