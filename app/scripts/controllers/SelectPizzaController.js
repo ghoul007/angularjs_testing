@@ -6,10 +6,6 @@ angular
 
     $scope.orderInProgress = false;
     $scope.placeOrder = function() {
-      $scope.orderInProgress = false;
-      if ($scope.pizzaType !== '') {
-        $scope.orderInProgress = true;
-
-      }
+        $location.path('/checkout');
     };
   });

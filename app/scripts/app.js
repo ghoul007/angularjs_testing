@@ -7,4 +7,8 @@ angular
             templateUrl: 'views/select-pizza.html',
             controller: 'SelectPizzaController'
         })
+        .when('/checkout', {
+            templateUrl: 'views/checkout.html',
+            controller: 'CheckoutController'
+        })
 });

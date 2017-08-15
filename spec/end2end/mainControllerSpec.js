@@ -24,18 +24,32 @@ describe("application", function() {
         browser.get("#/").then(function() {
             return browser.getTitle();
         }).then(function(title) {
-
             var EC = protractor.ExpectedConditions;
                browser.wait(EC.presenceOf(element(by.id('pizza'))), 2000);
-
-
-
             var list = element(by.id('pizza'));
             expect(list.getText()).toBe('Order a pizza');
-
-
-
             expect(title).toEqual("Welcome");
         });
     });
 });
+
+describe("test select", function() {
+    it("submit test", function() {
+        browser.get("#/").then(function() {
+            return browser.getTitle();
+        }).then(function(title) {
+
+            var EC = protractor.ExpectedConditions;
+            browser.wait(EC.presenceOf(element(by.id('pizza'))), 2000);
+            var options  =  element.all(by.tagName('option'));
+            options.get(2).click();
+            var btn   =  element(by.buttonText('Place Order')) ;
+            var nbre   =  element(by.model('numbre')).sendKeys('10') ;
+            btn.click();
+            expect(browser.getLocationAbsUrl()).toBe('/checkout');
+            // browser.sleep('6000');
+        });
+    });
+});
+
+
